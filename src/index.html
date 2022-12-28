@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamma | Photo Sharing App</title>
+
+    <!-- tailwind link -->
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- navbar from tailwind -->
+    <nav class="bg-white">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button
+              type="button"
+              class="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-slate-100 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!--
+                  Icon when menu is closed.
+      
+                  Heroicon name: outline/bars-3
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              <!--
+                  Icon when menu is open.
+      
+                  Heroicon name: outline/x-mark
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a
+                  href="#"
+                  class="text-teal-600 px-3 py-2 rounded-md text-xl font-bold"
+                  >Gamma</a
+                >
+
+                <a
+                  href="index.html"
+                  class="bg-slate-100 text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
+                  aria-current="page"
+                  >Home</a
+                >
+
+                <a
+                  href="about.html"
+                  class="text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+                  >About</a
+                >
+
+                <a
+                  href="contact.html"
+                  class="text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+                  >Contact</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a
+            href="#"
+            class="text-teal-600 block px-3 py-2 rounded-md text-xl font-bold"
+            >Gamma</a
+          >
+
+          <a
+            href="index.html"
+            class="bg-slate-100 text-gray-500 block px-3 py-2 rounded-md text-base font-medium"
+            aria-current="page"
+            >Home</a
+          >
+
+          <a
+            href="about.html"
+            class="text-gray-500 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
+            >About</a
+          >
+
+          <a
+            href="contact.html"
+            class="text-gray-500 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div
+      class="bg-header-bg flex-1 text-white justify-center text-center bg-no-repeat bg-cover bg-center h-[450px] lg:h-3/6"
+    >
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 pt-6 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"
+      >
+        <div class="text-center lg:text-left pl-10">
+          <h1 class="mt-16 md:mt-24 text-6xl">
+            Capture <span class="text-teal-600">Life</span>
+          </h1>
+          <p class="text-2xl py-8">
+            A fun and easy way to capture & share the moments you live for
+          </p>
+          <a href="#"
+            ><img
+              src="../images/icon_app_store.png"
+              alt="apple-store-icon-img"
+              class="w-2/5 h-1/6 mr-5 lg:mt-12 inline-block"
+          /></a>
+          <a href="#"
+            ><img
+              src="../images/icon_google_play.png"
+              alt="google-play-icon-img"
+              class="w-2/5 h-1/6 ml-5 lg:mt-12 inline-block"
+          /></a>
+        </div>
+        <div class="ml-auto mr-0 hidden lg:block">
+          <img class="" src="../images/site_phone.png" alt="iphone-image" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="flex-1 justify-center text-center">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 pt-6 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"
+      >
+        <div class="text-left p-10">
+          <img
+            src="../images/demo1.jpg"
+            alt="product1-img"
+            class="w-full border border-gray-300 p-6"
+          />
+          <h2 class="text-4xl py-3">Lorem Ipsum</h2>
+          <p class="text-base py-3 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
+            volutpat felis. Integer ornare vitae nisl eget rutrum.
+          </p>
+          <a
+            href="#"
+            class="w-full rounded-md border border-gray-300 text-base p-2 hover:bg-slate-100"
+            >Read More</a
+          >
+        </div>
+        <div class="text-left p-10">
+          <img
+            src="../images/demo2.jpg"
+            alt="product1-img"
+            class="w-full border border-gray-300 p-6"
+          />
+          <h2 class="text-4xl py-3">Lorem Ipsum</h2>
+          <p class="text-base py-3 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
+            volutpat felis. Integer ornare vitae nisl eget rutrum.
+          </p>
+          <a
+            href="#"
+            class="w-full rounded-md border border-gray-300 text-base p-2 hover:bg-slate-100"
+            >Read More</a
+          >
+        </div>
+        <div class="text-left p-10">
+          <img
+            src="../images/demo3.jpg"
+            alt="product1-img"
+            class="w-full border border-gray-300 p-6"
+          />
+          <h2 class="text-4xl py-3">Lorem Ipsum</h2>
+          <p class="text-base py-3 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
+            volutpat felis. Integer ornare vitae nisl eget rutrum.
+          </p>
+          <a
+            href="#"
+            class="w-full rounded-md border border-gray-300 text-base p-2 hover:bg-slate-100"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section - Features -->
+    <div
+      class="flex1 justify-center text-center bg-gradient-to-t from-teal-700 to-teal-600 text-white text-2xl"
+    >
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 pt-6 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"
+      >
+        <div class="text-left mx-auto my-auto my-8">
+          <h1 class="text-4xl py-8">Gamma Features</h1>
+          <ul>
+            <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Maecenas ac
+            </li>
+            <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Convallis turpis
+            </li>
+            <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Quis condimentum nulla
+            </li>
+            <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Ut suscipit
+            </li>
+            <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Sed tincidunt ligula
+            </li>
+          </ul>
+        </div>
+        <div class="justify-content text-center mx-auto my-auto my-8">
+          <img src="../images/logo.png" alt="logo-img" class="w-96" />
+        </div>
+      </div>
+    </div>
+
+    <!-- footer Section -->
+    <footer>
+      <div class="flex-1 justify-center text-center bg-gray-800 text-white">
+        <p class="py-6">Copyright &copy; 2022, All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
