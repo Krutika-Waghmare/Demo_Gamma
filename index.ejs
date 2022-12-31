@@ -1,0 +1,33 @@
+<%- include("./head.ejs") %> <%- include("./navbar.ejs") %>
+
+<!-- Main Content -->
+
+<div
+  class="grid grid-cols-10 bg-header-bg bg-no-repeat bg-cover bg-center"
+>
+  <div
+    class="flex flex-col justify-center text-center md:text-left text-white col-start-2 col-span-8 md:col-start-3 md:col-span-3"
+  >
+    <div>
+      <h1 class="text-6xl">Capture <span class="text-teal-600">Life</span></h1>
+      <p class="text-2xl py-8">
+        A fun and easy way to capture & share the moments you live for
+      </p>
+
+      <% {[['#', './images/icon_app_store.png'],
+      ['#','./images/icon_google_play.png']].map(([href, src]) => { %>
+      <a href="<%= href %>"
+        ><img src="<%= src %>" class="w-1/3 h-1/5 mt-12 mx-auto md:mr-8 block md:inline-block"
+      /></a>
+      <% })} %>
+    </div>
+  </div>
+  <div
+    class="ml-auto mr-0 hidden md:block mt-20 md:col-span-3"
+  >
+    <img class="w-3/4 ml-auto mr-0" src="images/site_phone.png" alt="iphone-image" />
+  </div>
+</div>
+
+<!-- footer Section -->
+<%- include("./footer.ejs") %>
