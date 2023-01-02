@@ -679,35 +679,21 @@ html {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 800px) {
   .container {
-    max-width: 640px;
+    max-width: 800px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+    max-width: 1000px;
   }
 }
 
@@ -7309,18 +7295,6 @@ html {
   grid-column: span 2 / span 2;
 }
 
-.col-span-8 {
-  grid-column: span 8 / span 8;
-}
-
-.col-span-7 {
-  grid-column: span 7 / span 7;
-}
-
-.col-start-2 {
-  grid-column-start: 2;
-}
-
 .float-right {
   float: right;
 }
@@ -7364,6 +7338,16 @@ html {
   margin-bottom: 2rem;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -7396,8 +7380,8 @@ html {
   margin-right: 0px;
 }
 
-.mt-12 {
-  margin-top: 3rem;
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mt-20 {
@@ -7520,10 +7504,6 @@ html {
   height: 1.25rem;
 }
 
-.h-1\/5 {
-  height: 20%;
-}
-
 .min-h-\[75vh\] {
   min-height: 75vh;
 }
@@ -7544,12 +7524,12 @@ html {
   width: 1.25rem;
 }
 
-.w-1\/3 {
-  width: 33.333333%;
+.w-4\/5 {
+  width: 80%;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-3\/5 {
+  width: 60%;
 }
 
 .max-w-7xl {
@@ -7888,14 +7868,6 @@ html {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-10 {
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
-.grid-cols-9 {
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -8062,6 +8034,18 @@ html {
 
 .justify-items-stretch {
   justify-items: stretch;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -8501,12 +8485,12 @@ html {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-header-bg {
-  background-image: url('../images/site_showcase_bg.jpg');
-}
-
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.bg-hero-img {
+  background-image: url('../images/site_showcase_bg.jpg');
 }
 
 .from-teal-700 {
@@ -8699,6 +8683,11 @@ html {
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pt-2 {
@@ -9317,106 +9306,13 @@ html {
   text-align: center;
 }
 
-@media (min-width: 640px) {
-  .sm\:container {
-    width: 100%;
-  }
-
-  @media (min-width: 640px) {
-    .sm\:container {
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .sm\:container {
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .sm\:container {
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .sm\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .sm\:container {
-      max-width: 1536px;
-    }
-  }
-
-  .sm\:ml-6 {
-    margin-left: 1.5rem;
-  }
-
-  .sm\:block {
-    display: block;
-  }
-
-  .sm\:hidden {
-    display: none;
-  }
-
-  .sm\:items-stretch {
-    align-items: stretch;
-  }
-
-  .sm\:justify-start {
-    justify-content: flex-start;
-  }
-
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .sm\:underline {
-    text-decoration-line: underline;
-  }
-}
-
-@media (min-width: 768px) {
-  .md\:col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-
-  .md\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
-  .md\:col-span-6 {
-    grid-column: span 6 / span 6;
-  }
-
-  .md\:col-start-2 {
-    grid-column-start: 2;
-  }
-
-  .md\:col-start-7 {
-    grid-column-start: 7;
-  }
-
-  .md\:col-start-5 {
-    grid-column-start: 5;
-  }
-
-  .md\:col-start-3 {
-    grid-column-start: 3;
-  }
-
+@media (min-width: 911px) {
   .md\:mt-24 {
     margin-top: 6rem;
   }
 
-  .md\:mr-8 {
-    margin-right: 2rem;
+  .md\:mt-20 {
+    margin-top: 5rem;
   }
 
   .md\:block {
@@ -9427,12 +9323,36 @@ html {
     display: inline-block;
   }
 
+  .md\:inline {
+    display: inline;
+  }
+
+  .md\:h-16 {
+    height: 4rem;
+  }
+
   .md\:w-96 {
     width: 24rem;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .md\:w-2\/5 {
+    width: 40%;
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:pl-10 {
@@ -9441,88 +9361,5 @@ html {
 
   .md\:text-left {
     text-align: left;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-
-  .lg\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .lg\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
-  .lg\:col-start-3 {
-    grid-column-start: 3;
-  }
-
-  .lg\:col-start-5 {
-    grid-column-start: 5;
-  }
-
-  .lg\:col-start-7 {
-    grid-column-start: 7;
-  }
-
-  .lg\:col-start-2 {
-    grid-column-start: 2;
-  }
-
-  .lg\:col-start-6 {
-    grid-column-start: 6;
-  }
-
-  .lg\:mt-12 {
-    margin-top: 3rem;
-  }
-
-  .lg\:block {
-    display: block;
-  }
-
-  .lg\:h-3\/6 {
-    height: 50%;
-  }
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .lg\:text-left {
-    text-align: left;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  @media (min-width: 1024px) {
-    .table tr.dark\:lg\:hover:hover th,
-    .table tr.dark\:lg\:hover:hover td,
-    .table tr.dark\:lg\:hover:nth-child(even):hover th,
-    .table tr.dark\:lg\:hover:nth-child(even):hover td {
-      --tw-bg-opacity: 1;
-      background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
-    }
-
-    .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
-      paint-order: markers;
-    }
   }
 }
