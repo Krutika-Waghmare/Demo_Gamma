@@ -1,60 +1,115 @@
+<!-- head section -->
 <%- include("./head.ejs") %>
-<%- include("./navbar.ejs") %>
-  
 
+<!-- navbar -->
+<div class="container"><%- include("./navbar.ejs") %></div>
+
+<!-- Title Section -->
+<%- include("./title.ejs", {title: 'About Gamma'}) %>
+
+<!-- Main Section -->
+<div class="container flex min-h-[62vh]">
+  <div class="grid grid-cols-1 md:grid-cols-3">
     <!-- Main Content -->
-    <div
-      class="grid grid-cols-10 bg-header-bg "
-     >
-       <div
-        class="flex flex-col justify-center  text-white col-start-2 col-span-8 md:col-start-3 md:col-span-3"
-       >
-        <div>
-         <h1 class="text-6xl">Capture <span class="text-teal-600">Life</span></h1>
-           <p class="text-2xl py-8">
-            A fun and easy way to capture & share the moments you live for
+    <div class="col-span-2">
+      <h2 class="text-4xl py-8">Lorem Ipsum</h2>
+      <p class="text-base py-3 mb-4">
+        Aliquam nisl risus, imperdiet non elementum vitae, bibendum in ipsum.
+        Pellentesque venenatis finibus aliquet. Duis metus justo, lacinia
+        sodales lacus vitae, facilisis egestas massa. Maecenas nec porta urna,
+        nec vulputate est. In hac habitasse platea dictumst. Sed ac felis at sem
+        porta aliquam in vitae sapien. Pellentesque finibus gravida tortor ac
+        ullamcorper. In at ultrices velit. Integer interdum tortor nec eros
+        dapibus lacinia ut in turpis. Pellentesque orci justo, dignissim in
+        aliquet ac, ultricies in dolor. Aliquam erat volutpat. Cras a dolor id
+        purus fermentum semper tristique eu neque. Mauris gravida tortor at enim
+        eleifend feugiat.
+      </p>
+
+      <!-- accordion -->
+      <div class="collapse mb-1">
+        <input type="checkbox" />
+        <div
+          class="collapse-title text-xl font-normal pl-1 border border-slate-100 bg-gray-100 rounded"
+        >
+          Collapsible Group Item #1
+        </div>
+        <div class="collapse-content text-base pl-1">
+          <p>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+            single-origin coffee nulla assumenda shoreditch et. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth
+            nesciunt you probably haven't heard of them accusamus labore
+            sustainable VHS.
           </p>
-    
-           <% {[['#', './images/icon_app_store.png'],
-          ['#','./images/icon_google_play.png']].map(([href, src]) => { %>
-          <a href="<%= href %>"
-            ><img src="<%= src %>" class="w-1/3 h-1/5 mt-12 mx-auto md:mr-8 block md:inline-block"
-           /></a>
-         <% })} %>
-     </div>
-       </div>
-     <div
-        class="ml-auto mr-0 hidden md:block mt-20 md:col-span-3"
-       >
-        <img class="w-3/4 ml-auto mr-0" src="images/site_phone.png" alt="iphone-image" />
+        </div>
       </div>
-    </div>     
+      <div class="collapse mb-1">
+        <input type="checkbox" />
+        <div
+          class="collapse-title text-xl font-normal pl-1 border border-slate-100 bg-gray-100 rounded"
+        >
+          Collapsible Group Item #2
+        </div>
+        <div class="collapse-content text-base pl-1">
+          <p>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+            single-origin coffee nulla assumenda shoreditch et. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth
+            nesciunt you probably haven't heard of them accusamus labore
+            sustainable VHS.
+          </p>
+        </div>
+      </div>
+      <div class="collapse mb-1">
+        <input type="checkbox" />
+        <div
+          class="collapse-title text-xl font-normal pl-1 border border-slate-100 bg-gray-100 rounded"
+        >
+          Collapsible Group Item #3
+        </div>
+        <div class="collapse-content text-base pl-1">
+          <p>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+            single-origin coffee nulla assumenda shoreditch et. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth
+            nesciunt you probably haven't heard of them accusamus labore
+            sustainable VHS.
+          </p>
+        </div>
+      </div>
+    </div>
 
-
-    <!-- Main Content -->
-<div class="bg-header-bg bg-no-repeat bg-cover bg-center text-white min-h-max">
-  <div class="grid grid-cols-1 gap-6 px-10 pt-24 md:grid-cols-3 md:grid-rows-2 content-evenly">
-    <div class="md:col-span-2 text-center md:text-left leading-loose">
-    <h1 class="text-6xl">
-      Capture <span class="text-teal-600">Life</span>
-    </h1>
-    
-    <p class="text-2xl pt-10">
-      A fun and easy way to capture & share the moments you live for
-    </p>
-  </div>
-
-    <% {[['#', './images/icon_app_store.png'],
-    ['#','./images/icon_google_play.png']].map(([href, src]) => { %>
-    <a href="<%= href %>" class="md:row-start-2"><img src="<%= src %>" class="w-3/4 h-1/2"/></a>
-    <% })} %>
-
-    <img
-      class="ml-auto mr-0 md:w-4/5 hidden md:block md:row-start-1 md:row-span-full md:col-span-2"
-      src="images/site_phone.png"
-      alt="iphone-image"
-    />
-    
+    <!-- Side Content -->
+    <div class="text-left p-10 mx-auto">
+      <img
+        src="images/demo1.jpg"
+        alt="product1-img"
+        class="w-full border border-gray-300 p-6"
+      />
+      <h2 class="text-4xl py-3">Lorem Ipsum</h2>
+      <p class="text-base py-3 mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+        consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
+        volutpat felis. Integer ornare vitae nisl eget rutrum.
+      </p>
+      <a href="#" class="btn btn-wide btn-outline w-full">Read More</a>
+    </div>
   </div>
 </div>
 

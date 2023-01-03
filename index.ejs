@@ -1,15 +1,12 @@
 <!-- head section -->
 <%- include("./head.ejs") %>
 
+<!-- navbar -->
+<div class="container"><%- include("./navbar.ejs") %></div>
 
-  <!-- navbar -->
-  <%- include("./navbar.ejs") %>
-
-  <!-- Hero -->
-  <div class="bg-hero-img bg-no-repeat bg-cover bg-center">
-  <div
-    class="container flex flex-col md:flex-row items-center gap-12"
-  >
+<!-- Hero -->
+<div class=" flex bg-hero-img bg-no-repeat bg-cover bg-center">
+  <div class="container flex flex-col md:flex-row items-center gap-12">
     <!-- Content -->
     <div
       class="flex flex-1 flex-col items-center md:items-start text-white my-10 md:mt-20"
@@ -20,11 +17,13 @@
       <p class="text-xl text-center md:text-left mb-8">
         A fun and easy way to capture & share the moments you live for
       </p>
-      <div class="flex flex-col md:flex-row items-center justify-center md:justify-start flex-wrap gap-6">
+      <div
+        class="flex flex-col md:flex-row items-center justify-center md:justify-start flex-wrap gap-6"
+      >
         <% {[['#', './images/icon_app_store.png'],
         ['#','./images/icon_google_play.png']].map(([href, src]) => { %>
         <a href="<%= href %>" class="w-4/5 h-16 md:w-2/5 md:h-16"
-          ><img src="<%= src %>" class="w-full h-16 mb-10"
+          ><img src="<%= src %>" class="w-full h-16 mb-10 hover:sepia"
         /></a>
         <% })} %>
       </div>
@@ -33,37 +32,81 @@
     <div class="flex flex-1 justify-end mt-20 lg:mt-40 hidden md:block">
       <img
         class="ml-auto mr-0 w-3/5"
-        src="images/site_phone.png"
+        src="./images/site_phone.png"
         alt="iphone-image"
       />
     </div>
   </div>
 </div>
 
-  <!-- Middle Section -->
-  <div class="container grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
-    <% {[['./images/demo1.jpg', 'product-img1'],
-        ['./images/demo2.jpg','product-img2'],
-        ['./images/demo3.jpg','product-img3']].map(([src, alt]) => { %>
-          <div class="text-left">
-          <img
-            src="<%= src %>"
-            alt="<%= alt %>"
-            class="w-full border border-gray-300 p-6"
-          />
-          <h2 class="text-4xl py-4">Lorem Ipsum</h2>
-          <p class="text-base py-3 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
-            volutpat felis. Integer ornare vitae nisl eget rutrum.
-          </p>
-          <a
-            href="#"
-            class="w-full rounded-md border border-gray-300 text-base p-2 hover:bg-slate-100"
-            >Read More</a>
-        </div>
-        <% })} %>
+<!-- Middle Section -->
+<div class="container flex grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
+  <% {[['./images/demo1.jpg', 'product-img1'],
+  ['./images/demo2.jpg','product-img2'],
+  ['./images/demo3.jpg','product-img3']].map(([src, alt]) => { %>
+  <div class="text-left">
+    <img
+      src="<%= src %>"
+      alt="<%= alt %>"
+      class="w-full border border-gray-300 p-6"
+    />
+    <h2 class="text-4xl py-4">Lorem Ipsum</h2>
+    <p class="text-base py-3 mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat
+      tempor nibh at fringilla. Aenean sed ultrices eros, ac volutpat felis.
+      Integer ornare vitae nisl eget rutrum.
+    </p>
+    <a
+      href="#"
+      class="btn btn-wide btn-outline w-full"
+      >Read More</a>
   </div>
+  <% })} %>
+</div>
+
+<!-- Bottom Section - Features -->
+<div class=" flex bg-gradient-to-t from-teal-700 to-teal-600 text-white text-2xl">
+  <div class="container flex flex-col md:flex-row items-center gap-12">
+    <!-- Features List -->
+    <div
+      class="flex flex-1 flex-col items-center md:items-start text-white my-10 md:my-20"
+    >
+      <h1 class="text-4xl text-center md:text-left my-8">
+        Gamma Features
+      </h1>
+      <ul>
+        <% {['Maecenas ac','Convallis turpis', 'Quis condimentum nulla', 'Ut suscipit', 'Sed tincidunt ligula'].map((feature) => { %>
+              <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              <%= feature %>
+            </li>
+        <% })} %>
+      </ul>
+    </div>
+    <!-- Logo Image -->
+    <div class="flex flex-1 mb-10 md:my-20">
+      <img
+        class="ml-auto mr-0 w-96"
+        src="./images/logo.png"
+        alt="logo-image"
+      />
+    </div>
+  </div>
+</div>
+
 
 <!-- footer Section -->
 <%- include("./footer.ejs") %>

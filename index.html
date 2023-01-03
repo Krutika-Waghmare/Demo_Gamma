@@ -9,30 +9,69 @@
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
 
-
-  <!-- navbar -->
-  <body>
+<!-- navbar -->
+<div class="container"><body>
     <!-- navbar Section -->
-
-    <div class="container navbar bg-base-100">
-      <div class="flex-none">
-        <button class="btn btn-square btn-ghost">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            class="inline-block w-5 h-5 stroke-current"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
+    <div class="navbar bg-base-100 contents md:hidden">
+    <div class="collapse">
+      <input type="checkbox" /> 
+      <div class="collapse-title">
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="inline-block w-5 h-5 stroke-current"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </div>
-      <div class="flex-1">
+      <div class="collapse-content"> 
+        <div class="flex flex-col">
+          
+          <a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./index.html"
+          >
+            Gamma
+          </a>
+          
+          <a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./index.html"
+          >
+            Home
+          </a>
+          
+          <a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./about.html"
+          >
+            About
+          </a>
+          
+          <a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./contact.html"
+          >
+            Contact
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="navbar bg-base-100 hidden md:contents">
+      <div class="flex-1 py-6">
         
         <a
           class="btn btn-ghost normal-case text-xl navLinks"
@@ -63,13 +102,11 @@
         </a>
         
       </div>
-    </div>
+    </div></div>
 
-  <!-- Hero -->
-  <div class="bg-hero-img bg-no-repeat bg-cover bg-center">
-  <div
-    class="container flex flex-col md:flex-row items-center gap-12"
-  >
+<!-- Hero -->
+<div class=" flex bg-hero-img bg-no-repeat bg-cover bg-center">
+  <div class="container flex flex-col md:flex-row items-center gap-12">
     <!-- Content -->
     <div
       class="flex flex-1 flex-col items-center md:items-start text-white my-10 md:mt-20"
@@ -80,14 +117,16 @@
       <p class="text-xl text-center md:text-left mb-8">
         A fun and easy way to capture & share the moments you live for
       </p>
-      <div class="flex flex-col md:flex-row items-center justify-center md:justify-start flex-wrap gap-6">
+      <div
+        class="flex flex-col md:flex-row items-center justify-center md:justify-start flex-wrap gap-6"
+      >
         
         <a href="#" class="w-4/5 h-16 md:w-2/5 md:h-16"
-          ><img src="./images/icon_app_store.png" class="w-full h-16 mb-10"
+          ><img src="./images/icon_app_store.png" class="w-full h-16 mb-10 hover:sepia"
         /></a>
         
         <a href="#" class="w-4/5 h-16 md:w-2/5 md:h-16"
-          ><img src="./images/icon_google_play.png" class="w-full h-16 mb-10"
+          ><img src="./images/icon_google_play.png" class="w-full h-16 mb-10 hover:sepia"
         /></a>
         
       </div>
@@ -96,78 +135,194 @@
     <div class="flex flex-1 justify-end mt-20 lg:mt-40 hidden md:block">
       <img
         class="ml-auto mr-0 w-3/5"
-        src="images/site_phone.png"
+        src="./images/site_phone.png"
         alt="iphone-image"
       />
     </div>
   </div>
 </div>
 
-  <!-- Middle Section -->
-  <div class="container grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
-    
-          <div class="text-left">
-          <img
-            src="./images/demo1.jpg"
-            alt="product-img1"
-            class="w-full border border-gray-300 p-6"
-          />
-          <h2 class="text-4xl py-4">Lorem Ipsum</h2>
-          <p class="text-base py-3 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
-            volutpat felis. Integer ornare vitae nisl eget rutrum.
-          </p>
-          <a
-            href="#"
-            class="w-full rounded-md border border-gray-300 text-base p-2 hover:bg-slate-100"
-            >Read More</a>
-        </div>
-        
-          <div class="text-left">
-          <img
-            src="./images/demo2.jpg"
-            alt="product-img2"
-            class="w-full border border-gray-300 p-6"
-          />
-          <h2 class="text-4xl py-4">Lorem Ipsum</h2>
-          <p class="text-base py-3 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
-            volutpat felis. Integer ornare vitae nisl eget rutrum.
-          </p>
-          <a
-            href="#"
-            class="w-full rounded-md border border-gray-300 text-base p-2 hover:bg-slate-100"
-            >Read More</a>
-        </div>
-        
-          <div class="text-left">
-          <img
-            src="./images/demo3.jpg"
-            alt="product-img3"
-            class="w-full border border-gray-300 p-6"
-          />
-          <h2 class="text-4xl py-4">Lorem Ipsum</h2>
-          <p class="text-base py-3 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
-            volutpat felis. Integer ornare vitae nisl eget rutrum.
-          </p>
-          <a
-            href="#"
-            class="w-full rounded-md border border-gray-300 text-base p-2 hover:bg-slate-100"
-            >Read More</a>
-        </div>
-        
+<!-- Middle Section -->
+<div class="container flex grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
+  
+  <div class="text-left">
+    <img
+      src="./images/demo1.jpg"
+      alt="product-img1"
+      class="w-full border border-gray-300 p-6"
+    />
+    <h2 class="text-4xl py-4">Lorem Ipsum</h2>
+    <p class="text-base py-3 mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat
+      tempor nibh at fringilla. Aenean sed ultrices eros, ac volutpat felis.
+      Integer ornare vitae nisl eget rutrum.
+    </p>
+    <a
+      href="#"
+      class="btn btn-wide btn-outline w-full"
+      >Read More</a>
   </div>
+  
+  <div class="text-left">
+    <img
+      src="./images/demo2.jpg"
+      alt="product-img2"
+      class="w-full border border-gray-300 p-6"
+    />
+    <h2 class="text-4xl py-4">Lorem Ipsum</h2>
+    <p class="text-base py-3 mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat
+      tempor nibh at fringilla. Aenean sed ultrices eros, ac volutpat felis.
+      Integer ornare vitae nisl eget rutrum.
+    </p>
+    <a
+      href="#"
+      class="btn btn-wide btn-outline w-full"
+      >Read More</a>
+  </div>
+  
+  <div class="text-left">
+    <img
+      src="./images/demo3.jpg"
+      alt="product-img3"
+      class="w-full border border-gray-300 p-6"
+    />
+    <h2 class="text-4xl py-4">Lorem Ipsum</h2>
+    <p class="text-base py-3 mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat
+      tempor nibh at fringilla. Aenean sed ultrices eros, ac volutpat felis.
+      Integer ornare vitae nisl eget rutrum.
+    </p>
+    <a
+      href="#"
+      class="btn btn-wide btn-outline w-full"
+      >Read More</a>
+  </div>
+  
+</div>
+
+<!-- Bottom Section - Features -->
+<div class=" flex bg-gradient-to-t from-teal-700 to-teal-600 text-white text-2xl">
+  <div class="container flex flex-col md:flex-row items-center gap-12">
+    <!-- Features List -->
+    <div
+      class="flex flex-1 flex-col items-center md:items-start text-white my-10 md:my-20"
+    >
+      <h1 class="text-4xl text-center md:text-left my-8">
+        Gamma Features
+      </h1>
+      <ul>
+        
+              <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Maecenas ac
+            </li>
+        
+              <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Convallis turpis
+            </li>
+        
+              <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Quis condimentum nulla
+            </li>
+        
+              <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Ut suscipit
+            </li>
+        
+              <li class="py-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="6"
+                stroke="currentColor"
+                class="w-6 h-6 inline-block"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+              Sed tincidunt ligula
+            </li>
+        
+      </ul>
+    </div>
+    <!-- Logo Image -->
+    <div class="flex flex-1 mb-10 md:my-20">
+      <img
+        class="ml-auto mr-0 w-96"
+        src="./images/logo.png"
+        alt="logo-image"
+      />
+    </div>
+  </div>
+</div>
+
 
 <!-- footer Section -->
         <!-- footer Section -->
-
+    
         <footer class="footer footer-center p-4 bg-gray-800 text-base-content">
-            <div class="text-white ">
-            <p class="py-6">Copyright © 2022 - All Right Reserved</p>
+            <div class="text-white container flex justify-center">
+            <p class="py-6 text-center text-base">Copyright © 2022 - All Right Reserved</p>
             </div>
         </footer>
 

@@ -1,9 +1,65 @@
+<!-- head section -->
 <%- include("./head.ejs") %>
-<%- include("./navbar.ejs") %>
-  
 
+<!-- navbar -->
+<div class="container"><%- include("./navbar.ejs") %></div>
+
+<!-- Title Section -->
+<%- include("./title.ejs", {title: 'Contact Us'}) %>
+
+<!-- Main Section -->
+<div class="container flex min-h-[62vh]">
+  <div class="grid grid-cols-1 md:grid-cols-3">
     <!-- Main Content -->
-     
+    <div class="col-span-2">
+      <!-- Contact Us form -->
+      <div class="form-control w-full max-w-xs my-10 mx-auto md:mx-0">
+        <!-- name, company, email input using map -->
+        <% {[['Name', 'text', 'Enter Name', 'name'], 
+             ['Company', 'text', 'Enter Company', 'company'],
+             ['Email','email', 'Enter Email', 'email']].map(([labelText, type, placeholder, name]) => { %>
+             <label class="label">
+               <span class="label-text"><%= labelText %></span>
+             </label>
+             <input
+              type="<%= type %>"
+              placeholder="<%= placeholder %>"
+              name="<%= name %>"
+              class="input input-bordered w-full max-w-xs"
+            />
+        <% })} %>
+
+        <!-- textarea: message input -->
+        <label class="label">
+          <span class="label-text">Message</span>
+        </label>
+        <textarea
+          class="textarea textarea-bordered h-24"
+          placeholder="Message"
+        ></textarea>
+
+        <!-- submit button to submit form -->
+        <button class="btn btn-wide w-full my-6">Submit</button>
+      </div>
+    </div>
+
+    <!-- Side Content -->
+    <div class="text-left p-10 mx-auto">
+      <img
+        src="images/demo2.jpg"
+        alt="product1-img"
+        class="w-full border border-gray-300 p-6"
+      />
+      <h2 class="text-4xl py-3">Lorem Ipsum</h2>
+      <p class="text-base py-3 mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+        consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
+        volutpat felis. Integer ornare vitae nisl eget rutrum.
+      </p>
+      <a href="#" class="btn btn-wide btn-outline w-full">Read More</a>
+    </div>
+  </div>
+</div>
 
 <!-- footer Section -->
 <%- include("./footer.ejs") %>

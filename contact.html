@@ -1,0 +1,200 @@
+<!-- head section -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamma | Photo Sharing App</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+
+<!-- navbar -->
+<div class="container"><body>
+    <!-- navbar Section -->
+    <div class="navbar bg-base-100 contents md:hidden">
+    <div class="collapse">
+      <input type="checkbox" /> 
+      <div class="collapse-title">
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="inline-block w-5 h-5 stroke-current"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="collapse-content"> 
+        <div class="flex flex-col">
+          
+          <a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./index.html"
+          >
+            Gamma
+          </a>
+          
+          <a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./index.html"
+          >
+            Home
+          </a>
+          
+          <a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./about.html"
+          >
+            About
+          </a>
+          
+          <a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./contact.html"
+          >
+            Contact
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="navbar bg-base-100 hidden md:contents">
+      <div class="flex-1 py-6">
+        
+        <a
+          class="btn btn-ghost normal-case text-xl navLinks"
+          href="./index.html"
+        >
+          Gamma
+        </a>
+        
+        <a
+          class="btn btn-ghost normal-case text-xl navLinks"
+          href="./index.html"
+        >
+          Home
+        </a>
+        
+        <a
+          class="btn btn-ghost normal-case text-xl navLinks"
+          href="./about.html"
+        >
+          About
+        </a>
+        
+        <a
+          class="btn btn-ghost normal-case text-xl navLinks"
+          href="./contact.html"
+        >
+          Contact
+        </a>
+        
+      </div>
+    </div></div>
+
+<!-- Title Section -->
+<div class="text-white bg-teal-600">
+    <div class="container flex">
+        <h1
+          class="py-8 rounded-md text-4xl font-bold text-center md:text-left my-8"
+        >
+          Contact Us
+        </h1>
+    </div>
+</div>
+
+<!-- Main Section -->
+<div class="container flex min-h-[62vh]">
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    <!-- Main Content -->
+    <div class="col-span-2">
+      <!-- Contact Us form -->
+      <div class="form-control w-full max-w-xs my-10 mx-auto md:mx-0">
+        <!-- name, company, email input using map -->
+        
+             <label class="label">
+               <span class="label-text">Name</span>
+             </label>
+             <input
+              type="text"
+              placeholder="Enter Name"
+              name="name"
+              class="input input-bordered w-full max-w-xs"
+            />
+        
+             <label class="label">
+               <span class="label-text">Company</span>
+             </label>
+             <input
+              type="text"
+              placeholder="Enter Company"
+              name="company"
+              class="input input-bordered w-full max-w-xs"
+            />
+        
+             <label class="label">
+               <span class="label-text">Email</span>
+             </label>
+             <input
+              type="email"
+              placeholder="Enter Email"
+              name="email"
+              class="input input-bordered w-full max-w-xs"
+            />
+        
+
+        <!-- textarea: message input -->
+        <label class="label">
+          <span class="label-text">Message</span>
+        </label>
+        <textarea
+          class="textarea textarea-bordered h-24"
+          placeholder="Message"
+        ></textarea>
+
+        <!-- submit button to submit form -->
+        <button class="btn btn-wide w-full my-6">Submit</button>
+      </div>
+    </div>
+
+    <!-- Side Content -->
+    <div class="text-left p-10 mx-auto">
+      <img
+        src="images/demo2.jpg"
+        alt="product1-img"
+        class="w-full border border-gray-300 p-6"
+      />
+      <h2 class="text-4xl py-3">Lorem Ipsum</h2>
+      <p class="text-base py-3 mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+        consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
+        volutpat felis. Integer ornare vitae nisl eget rutrum.
+      </p>
+      <a href="#" class="btn btn-wide btn-outline w-full">Read More</a>
+    </div>
+  </div>
+</div>
+
+<!-- footer Section -->
+        <!-- footer Section -->
+    
+        <footer class="footer footer-center p-4 bg-gray-800 text-base-content">
+            <div class="text-white container flex justify-center">
+            <p class="py-6 text-center text-base">Copyright © 2022 - All Right Reserved</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

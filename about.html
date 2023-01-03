@@ -1,3 +1,4 @@
+<!-- head section -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,262 +6,229 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gamma | Photo Sharing App</title>
-
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <!-- navbar from tailwind -->
-    <nav class="bg-white">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <!-- Mobile menu button-->
-            <button
-              type="button"
-              class="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-slate-100 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
+
+<!-- navbar -->
+<div class="container"><body>
+    <!-- navbar Section -->
+    <div class="navbar bg-base-100 contents md:hidden">
+    <div class="collapse">
+      <input type="checkbox" /> 
+      <div class="collapse-title">
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="inline-block w-5 h-5 stroke-current"
             >
-              <span class="sr-only">Open main menu</span>
-              <!--
-                  Icon when menu is closed.
-      
-                  Heroicon name: outline/bars-3
-      
-                  Menu open: "hidden", Menu closed: "block"
-                -->
-              <svg
-                class="block h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-              <!--
-                  Icon when menu is open.
-      
-                  Heroicon name: outline/x-mark
-      
-                  Menu open: "block", Menu closed: "hidden"
-                -->
-              <svg
-                class="hidden h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
-          >
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a
-                  href="#"
-                  class="text-teal-600 px-3 py-2 rounded-md text-xl font-bold"
-                  >Gamma</a
-                >
-
-                <a
-                  href="index.html"
-                  class="text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
-                  >Home</a
-                >
-
-                <a
-                  href="about.html"
-                  class="bg-slate-100 text-gray-500 px-3 py-2 rounded-md text-sm font-medium"
-                  aria-current="page"
-                  >About</a
-                >
-
-                <a
-                  href="contact.html"
-                  class="text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
-                  >Contact</a
-                >
-              </div>
-            </div>
-          </div>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
-
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pt-2 pb-3">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <div class="collapse-content"> 
+        <div class="flex flex-col">
+          
           <a
-            href="#"
-            class="text-teal-600 block px-3 py-2 rounded-md text-xl font-bold"
-            >Gamma</a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./index.html"
           >
-
+            Gamma
+          </a>
+          
           <a
-            href="index.html"
-            class="text-gray-500 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
-            >Home</a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./index.html"
           >
-
+            Home
+          </a>
+          
           <a
-            href="about.html"
-            class="bg-slate-100 text-gray-500 block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page"
-            >About</a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./about.html"
           >
-
+            About
+          </a>
+          
           <a
-            href="contact.html"
-            class="text-gray-500 hover:text-gray-600 block px-3 py-2 rounded-md text-base font-medium"
-            >Contact</a
+            class="btn btn-ghost normal-case text-xl navLinks"
+            href="./contact.html"
           >
+            Contact
+          </a>
+          
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
 
-    <!-- Title Section -->
-    <div class="flex-1 text-white bg-teal-600">
-      <div class="grid grid-cols-1 pt-6 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="navbar bg-base-100 hidden md:contents">
+      <div class="flex-1 py-6">
+        
+        <a
+          class="btn btn-ghost normal-case text-xl navLinks"
+          href="./index.html"
+        >
+          Gamma
+        </a>
+        
+        <a
+          class="btn btn-ghost normal-case text-xl navLinks"
+          href="./index.html"
+        >
+          Home
+        </a>
+        
+        <a
+          class="btn btn-ghost normal-case text-xl navLinks"
+          href="./about.html"
+        >
+          About
+        </a>
+        
+        <a
+          class="btn btn-ghost normal-case text-xl navLinks"
+          href="./contact.html"
+        >
+          Contact
+        </a>
+        
+      </div>
+    </div></div>
+
+<!-- Title Section -->
+<div class="text-white bg-teal-600">
+    <div class="container flex">
         <h1
-          class="px-8 py-2 rounded-md text-4xl font-bold text-center md:text-left mb-8"
+          class="py-8 rounded-md text-4xl font-bold text-center md:text-left my-8"
         >
           About Gamma
         </h1>
-      </div>
     </div>
+</div>
 
-    <!-- Middle Section -->
-    <div class="flex-1 justify-center text-center min-h-[75vh]">
-      <div
-        class="grid grid-cols-1 lg:grid-cols-3 pt-6 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"
-      >
-        <div class="text-left p-10 col-span-2">
-          <h2 class="text-4xl py-3">Lorem Ipsum</h2>
-          <p class="text-base py-3 mb-4">
-            Aliquam nisl risus, imperdiet non elementum vitae, bibendum in
-            ipsum. Pellentesque venenatis finibus aliquet. Duis metus justo,
-            lacinia sodales lacus vitae, facilisis egestas massa. Maecenas nec
-            porta urna, nec vulputate est. In hac habitasse platea dictumst. Sed
-            ac felis at sem porta aliquam in vitae sapien. Pellentesque finibus
-            gravida tortor ac ullamcorper. In at ultrices velit. Integer
-            interdum tortor nec eros dapibus lacinia ut in turpis. Pellentesque
-            orci justo, dignissim in aliquet ac, ultricies in dolor. Aliquam
-            erat volutpat. Cras a dolor id purus fermentum semper tristique eu
-            neque. Mauris gravida tortor at enim eleifend feugiat.
-          </p>
+<!-- Main Section -->
+<div class="container flex min-h-[62vh]">
+  <div class="grid grid-cols-1 md:grid-cols-3">
+    <!-- Main Content -->
+    <div class="col-span-2">
+      <h2 class="text-4xl py-8">Lorem Ipsum</h2>
+      <p class="text-base py-3 mb-4">
+        Aliquam nisl risus, imperdiet non elementum vitae, bibendum in ipsum.
+        Pellentesque venenatis finibus aliquet. Duis metus justo, lacinia
+        sodales lacus vitae, facilisis egestas massa. Maecenas nec porta urna,
+        nec vulputate est. In hac habitasse platea dictumst. Sed ac felis at sem
+        porta aliquam in vitae sapien. Pellentesque finibus gravida tortor ac
+        ullamcorper. In at ultrices velit. Integer interdum tortor nec eros
+        dapibus lacinia ut in turpis. Pellentesque orci justo, dignissim in
+        aliquet ac, ultricies in dolor. Aliquam erat volutpat. Cras a dolor id
+        purus fermentum semper tristique eu neque. Mauris gravida tortor at enim
+        eleifend feugiat.
+      </p>
 
-          <!-- accordion -->
-          <div class="collapse mb-1">
-            <input type="checkbox" />
-            <div
-              class="collapse-title text-xl font-normal pl-0 border border-slate-100 bg-gray-100 rounded"
-            >
-              Collapsible Group Item #1
-            </div>
-            <div class="collapse-content text-base pl-0">
-              <p>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
-              </p>
-            </div>
-          </div>
-          <div class="collapse mb-1">
-            <input type="checkbox" />
-            <div
-              class="collapse-title text-xl font-normal pl-0 border border-slate-100 bg-gray-100 rounded"
-            >
-              Collapsible Group Item #2
-            </div>
-            <div class="collapse-content text-base pl-0">
-              <p>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
-              </p>
-            </div>
-          </div>
-          <div class="collapse mb-1">
-            <input type="checkbox" />
-            <div
-              class="collapse-title text-xl font-normal pl-0 border border-slate-100 bg-gray-100 rounded"
-            >
-              Collapsible Group Item #3
-            </div>
-            <div class="collapse-content text-base pl-0">
-              <p>
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
-              </p>
-            </div>
-          </div>
+      <!-- accordion -->
+      <div class="collapse mb-1">
+        <input type="checkbox" />
+        <div
+          class="collapse-title text-xl font-normal pl-1 border border-slate-100 bg-gray-100 rounded"
+        >
+          Collapsible Group Item #1
         </div>
-        <div class="text-left p-10 mx-auto">
-          <img
-            src="images/demo1.jpg"
-            alt="product1-img"
-            class="w-full border border-gray-300 p-6"
-          />
-          <h2 class="text-4xl py-3">Lorem Ipsum</h2>
-          <p class="text-base py-3 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
-            volutpat felis. Integer ornare vitae nisl eget rutrum.
+        <div class="collapse-content text-base pl-1">
+          <p>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+            single-origin coffee nulla assumenda shoreditch et. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth
+            nesciunt you probably haven't heard of them accusamus labore
+            sustainable VHS.
           </p>
-          <a
-            href="#"
-            class="w-full rounded-md border border-gray-300 text-base p-2 hover:bg-slate-100"
-            >Read More</a
-          >
+        </div>
+      </div>
+      <div class="collapse mb-1">
+        <input type="checkbox" />
+        <div
+          class="collapse-title text-xl font-normal pl-1 border border-slate-100 bg-gray-100 rounded"
+        >
+          Collapsible Group Item #2
+        </div>
+        <div class="collapse-content text-base pl-1">
+          <p>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+            single-origin coffee nulla assumenda shoreditch et. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth
+            nesciunt you probably haven't heard of them accusamus labore
+            sustainable VHS.
+          </p>
+        </div>
+      </div>
+      <div class="collapse mb-1">
+        <input type="checkbox" />
+        <div
+          class="collapse-title text-xl font-normal pl-1 border border-slate-100 bg-gray-100 rounded"
+        >
+          Collapsible Group Item #3
+        </div>
+        <div class="collapse-content text-base pl-1">
+          <p>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+            skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+            Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+            single-origin coffee nulla assumenda shoreditch et. Nihil anim
+            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth
+            nesciunt you probably haven't heard of them accusamus labore
+            sustainable VHS.
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- footer Section -->
-    <footer>
-      <div class="flex-1 justify-center text-center bg-gray-800 text-white">
-        <p class="py-6">Copyright &copy; 2022, All Rights Reserved</p>
-      </div>
-    </footer>
-  </body>
+    <!-- Side Content -->
+    <div class="text-left p-10 mx-auto">
+      <img
+        src="images/demo1.jpg"
+        alt="product1-img"
+        class="w-full border border-gray-300 p-6"
+      />
+      <h2 class="text-4xl py-3">Lorem Ipsum</h2>
+      <p class="text-base py-3 mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+        consequat tempor nibh at fringilla. Aenean sed ultrices eros, ac
+        volutpat felis. Integer ornare vitae nisl eget rutrum.
+      </p>
+      <a href="#" class="btn btn-wide btn-outline w-full">Read More</a>
+    </div>
+  </div>
+</div>
+
+<!-- footer Section -->
+        <!-- footer Section -->
+    
+        <footer class="footer footer-center p-4 bg-gray-800 text-base-content">
+            <div class="text-white container flex justify-center">
+            <p class="py-6 text-center text-base">Copyright © 2022 - All Right Reserved</p>
+            </div>
+        </footer>
+
+    </body>
 </html>
